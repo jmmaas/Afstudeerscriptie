@@ -1,5 +1,278 @@
-\documentclass{article}
+\documentclass[11pt,twocolumn]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage[toc]{glossaries}
+\makeglossaries
+
+\newacronym{a11y}{A11Y} {accessibility (a followed by 11 more letters and finally an y)}
+\newglossaryentry{A11Y Group}
+{
+  name=11Y Group, 
+  description={ part of the Linux Foundation strives to establish free and open AT-         				standards}
+  }
+\longnewglossaryentry{API}
+{
+    name=API
+}
+{collection of invocation methods and associated parameters used by one piece of software to request actions from another piece of software. [ISO/IEC 18012-1 Information technology Home electronic system Guidelines for product interoperability Introduction, definition 3.1.1]}
+\longnewglossaryentry{accessibility broker}
+{ 
+  name=Accessibility broker
+}
+{is a daemon that coordinates the communication between AT-SPI aware applications and assistive technologies.}
+\longnewglossaryentry{assistive technology}
+{
+	name=assistive technology
+}
+{Assistive Technology hardware or software that is added to or incorporated within a system that increases accessibility for an individual,1e.g.braille displays, screen readers, screen magnification software and eye tracking devices are assistive technologies. \[ISO 9241\-171, definition 3.5\]}
+\newglossaryentry{ATK}
+{ 
+	name=ATK,
+    description={stands for accessibility toolkit. It is used by assistive technologies}
+}
+\longnewglossaryentry{AT-SPI}
+{ 
+  	name=AT-SPI
+}
+{or Assistive Technology Service Provider Interface, is the primary service interface by which assistive technologies query and receive notifications from running applications. (ISO/IEC PDTR 13066-4)}
+\newglossaryentry{AT-SPI Aware}
+{ 
+	name=AT-SPI aware,
+    description={means that the application is able to offer its GUI information via AT-SPI}
+}
+\newglossaryentry{AT-SPI-Registryd}
+{ 
+	name=AT-SPI-Registryd,
+    description={AT-SPI daemon}
+}
+\newglossaryentry{Bonobo}
+{ 
+	name=Bonobo,
+    description={Gnome component model for reusable software components and compound documents. Deprecated precursor of D-BUS}
+}
+\newacronym{cli}{CLI}{command line interface}
+\newglossaryentry{BSD3}
+{ 
+	name=BSD3,
+    description={is a permissive free software license, imposing minimal restrictions on the redistribution of covered software}
+}
+\newglossaryentry{CSPI}
+{ 
+	name=CSPI,
+    description={deprecated library replaced by libatspi}
+}
+\newglossaryentry{daemon}
+{ 
+	name=daemon,
+    description={a computer program that runs as a background process}
+}
+\longnewglossaryentry{D-bus}
+{ 
+	name=D-bus
+}
+{or Desktop-BUS, is a message bus system for inter-process communication (IPC) and remote procedure calls (RPC) between processes running at the same time}
+\newacronym{dll}{DLL}{dynamic link library}
+\longnewglossaryentry{GAIL}
+{ 
+	name=GAIL
+}
+{(GNOME Accessibility Implementation Library) is an implementation of the accessibility interfaces defined by ATK. Gail bridges between the GNOME widgets and a toolkit independent interface}
+\newacronym{gcc}{GCC}{GNU Compiler Collection}
+\newglossaryentry{GDBUS}
+{ 
+	name=GDBUS,
+    description={Gnome's tool for working with D-BUS objects}
+\newglossaryentry{gluecode}
+{  
+	name=gluecode,
+    description={also called binding code, is custom-written programming that connects incompatible software components}
+}
+}
+\longnewglossaryentry{GNOME}
+{
+	name=GNOME
+}
+{a free and open-source desktop environment. With Linux as its target environment.
+GNU or GNU's not Unix is a free software movement project. GNU-software also runs on Linux}
+\newglossaryentry{GTK}
+{ 
+	name=GTK,
+    description={or Gnome GUI toolkit, is a toolkit which is already mapped to ATK by the GAIL module}
+}
+\longnewglossaryentry{GTK+}
+{ 
+	name=GTK+,
+}
+{is a library for creating graphical user interfaces. It works on many UNIX-like platforms, Windows, and on framebuffer devices. GTK+ is released under the GNU Library General Public License (GNU LGPL), which allows for flexible licensing of client applications. GTK+ has a C-based object-oriented architecture that allows for maximum flexibility}
+\newacronym{GUI}{GUI}{Graphical User Interface}
+\longnewglossaryentry{Java ATK Wrapper}
+{ 
+	name=Java ATK Wrapper
+}
+{The Java library that listens to Swing events, and adapting JAAPI to ATK-interfaces.
+JNI Java Native Interface API. Interface between JVM and native applications}
+\newacronym{jvm}{JVM}{Java Virtual Machine}
+\newglossaryentry{KDE}
+{ 
+	name=KDE,
+    description={A free software community. Developer of the Plasma desktop environment}
+}
+\newglossaryentry{libatspi}
+{
+	name=libatspi,
+    description={C-based AT-SPI library}
+}
+\newglossaryentry{library}
+{ 
+	name=library,
+    description={a collection of reusable code}
+}
+\longnewglossaryentry{Linux}
+{ 
+	name=Linux
+}
+{Can relate to three different things: the Linux kernel, the Linux OS, or the various Linux distributions} 
+\newglossaryentry{ORBit}
+{ 
+	name=ORBit,
+    description={CORBA 2.4 Object Request Broker. No longer used by Gnome since Gnome 3.0}
+}
+\newglossaryentry{package}
+{ 
+	name=package,
+    description={a mechanism to distribute libraries}
+}
+\newglossaryentry{Pyatspi package}
+{ 
+	name=Pyatspi package,
+    description={Is a wrapper for AT-SPI so it can be used for applications written in Python}
+}
+\longnewglossaryentry{Qt}
+{
+	name=Qt
+}
+{Is a cross-platform application development framework for desktop, embedded and mobile. Supported Platforms include Linux, OS X, Windows, VxWorks, QNX, Android, iOS, BlackBerry, Sailfish OS and others}
+\newglossaryentry{SUT}
+{ 
+	name=SUT,
+    description={System Under Test refers to a system that is being tested for correct operation}
+}
+\newglossaryentry{UNO}
+{ 
+	name=UNO,
+    description={Universal Network Objects. Apache's OpenOffice accessibility API}
+}
+\newglossaryentry{WAI-ARAI}
+{ 
+	name=WAI-ARAI,
+    description={A W3C specification for Web Accessible Initiative-Accessible Rich Internet Applications}
+}
+\newglossaryentry{widget} 
+{ 
+	name=widget,
+    description={an element of interaction in a GUI}
+}
+\newglossaryentry{Windows UI Automation}
+{ 
+	name=Windows UI Automation,
+    description={API for identifying, accessing and manipulating UI elements of applications}
+}
+\newglossaryentry{Wine}
+{
+	name=Wine,
+    description={is not an emulator acronym is a compatibility layer for running Windows applications on Posix-compliant operating systems.}
+}
+\bibliography{Afstudeerproject}
+
 \begin{document}
-(Type your content here.)
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+       {\large \bfseries{Porting Testar to the Linux Platform}\par}\vspace{0.4cm} % Thesis title
+      
+        
+        \vspace{0.5cm}
+        
+        
+        \vspace{1.5cm}
+        \emph{Authors:}\\
+        {Wouter \textsc{Cox} woonplaats Nederland studentnummer xxxxxxx} and\\ {Jean-Marc \textsc{Maas} Bodegraven Nederland studentnummer 836521393}
+        \vfill
+        \emph{Supervisor:} \\
+        dr. Freek \textsc{Verbeek}\\
+        \vspace{0.5cm}
+        \emph{Examinators:}\\ 
+        {prof. dr. Tanja E.J. \textsc{Vos} and dr. ir. Harrie J.M. \textsc{Passier}}
+        \vfill
+        
+        T61327 - Afstudeerproject bachelor informatica
+     
+        
+        \vspace{0.8cm}
+        
+      
+        
+  
+        Open Universiteit Nederland, faculteit Informatica\\
+        {\large \today}\\[4cm] % Date
+        
+    \end{center}
+\end{titlepage}
+
+\section{Abstract}
+
+\section{Introduction}
+TESTAR is a tool that enables the automated system testing of desktop, web and mobile applications at the \gls{GUI} level.
+Since 2014, TESTAR has been deployed and used in several companies with impressive results, which show its potential to grow into a full-fledged tool that can help companies improve system testing at the GUI level.
+TESTAR is available under the \gls{BSD3} license.
+TESTAR has been developed within the context of the FITTEST (Future Internet Testing) project (EU project no: 257574 FP7 Call 8 ICT-Objective 1.2 Service Architectures and Infrastructures) that run from 2010 till 2013.
+
+
+\subsection{Wouter's substudy: Accessibility on the Windows platform}
+
+
+\subsection{Jean\-Marc's substudy: Accessibility on the Linux platform}
+\textbf{Introduction}
+\\The Windows OS version of Testar tests an application at the GUI level.
+It does so by exploring and testing the applications GUI by getting
+access to it via Microsoft UI Automation, Microsoft's accessibility
+framework\cite{RN7}. 
+\\The goal of this substudy is to find out and describe how Testar can get
+access to applications running on Linux OS via its assistive framework.
+\textbf{Accessibility frameworks on today’s operating systems}
+At the moment assistive technology architecture is available or embedded in the Windows-, UNIX/Linux- (Android for mobile devices) and Mac OS platform for pc, smartphone, or tablet.
+\\For Apple’s OS X it’s the NSAccessibility protocol \cite{RN8}.
+\\Microsoft started to include User Interface Automation (UIA) as part of the Windows OS since the release of Windows 7. Replacing MSAA which was introduced to Windows 95 in 1997 as an add-on \cite{RN9}.
+\\IBM released IAccessible2 in December 2006 as an open standard for Windows and Linux. IAccessible2 is now under the auspices of the Linux Foundation's Free Standard Group \cite{RN10}.
+At the moment, Iaccessible2 is only supported by Windows OS. 
+\\The assistive technology framework for Unix and Linux is called ATK/AT-SPI. It was originally developed by Sun and later adopted by the Gnome project\cite{RN24}
+\\The GNOME Accessibility Architecture was designed as a standardized interface between assistive technologies and applications and the user's Graphical User Interface. 
+\\Usually the accessibility framework is described as the assistive technologies being the client side, and the computer programs the server side. \cite{RN12}
+The server-side has two layers. A GNOME-specific layer, GAIL, the GNOME Accessibility Implementation Library, a bridge between the Accessibility Toolkit (ATK) and the Gnome widgets. The other layer is a DLL, or dynamic loaded library,  which bridges between ATK and AT-SPI (Assistive Technology Service Provider Interface).
+\\In short, AT-SPI is the client-side library useful to get information from the AT-SPI aware application to the assistive technology. ATK is the server-side library, implementing it exposes applications to assistive technologies. \cite{RN12}
+\\Although Android is based on the Linuxkernel, its accessibility architecture is different \cite{RN11}.
+\\For Java applications meant for Linux there is the Java Accessibility Framework which directly connects to AT-SPI and the Java ATK-wrapper which implements ATK using JNI. It converts Java Swing events so ATK can use them and provides these events to the ATK-Bridge. This makes the application "AT-SPI aware" and so possible for Testar to test its GUI.\cite{RN15}
+\\For Python applications on Linux the pyatspi wrapper is available. It wraps AT-SPI to make applications written in Python "AT-SPI aware". 
+\\Then there is the accessibility broker AT-SPI-Registryd, which is a daemon that coordinates the communication between AT-SPI aware applications and the assistive technologies. It deals with maintaining a hierarchy of AT-SPI objects of every accessible object\cite{RN27}. Different AT-SPI objects can belong to different processes because parent/child relations are modelled following the D-BUS specification.
+Several non-GNOME applications also support AT-SPI. Mozilla Firefox does so via the Iaccessibility interface.\cite{RN16}
+Apache’s OpenOffice supports AT via the UNO accessibility API. UNO is built after Java’s accessibility API. It is included in the OpenOffice packet.\cite{RN18}
+WAI-ARAI specifications strive for rich Internet applications to have the same accessibility as desktop GUI applications. Web browsers translate WAI-ARAI included in the rich Internet application’s markup to AT-SPI.\cite{RN17}
+
+\section{The Linux version of Testar}
+
+\section{Team reflection on the project}
+\subsection{Wouter's reflection on the project}
+\subsection{Jean-Marc's reflection on the project}
+
+\section{Discussion}
+
+\section{Acknowledgements}
+%optional
+\section{Glossary}
+\printglossaries
+ 
+\printbibliography
+
 \end{document}
